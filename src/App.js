@@ -1,6 +1,7 @@
-import { Hello } from "./Hello";
+import React from "react"
+import { Hello } from "./Hello"
 
-export class App extends React.Components{
+export class App extends React.Component{
     render(){
         return(
             <div>
