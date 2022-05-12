@@ -1,5 +1,6 @@
 import React from "react"
 import { Counter } from "./Counter"
+import { CounterDisplay } from "./CounterDisplay"
 import { Hello } from "./Hello"
 import { Welcome } from "./Welcome"
 
@@ -11,6 +12,7 @@ export class App extends React.Component{
                 <Hello name={<strong>React</strong>} />
                 <Welcome name='john' age={16}/>
                 <Counter />
+                <CounterDisplay  />
             </div>
         )
     }
