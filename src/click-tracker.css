@@ -1,0 +1,23 @@
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin:1rem;
+}
+.btn{
+    width: 150px;
+    height: 60px;
+    padding: 1rem;
+    text-align: center;
+
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.pink{
+    background-color: pink;
+}
