@@ -34,6 +34,13 @@ export class Login extends React.Component {
       button: true,
     });
   };
+  resetStatus = () => {
+    this.setState({
+      username: "",
+      password: "",
+      remember: false,
+    });
+  };
   render() {
     return (
       <div>
@@ -47,7 +54,7 @@ export class Login extends React.Component {
           type="password"
           name="password"
           onChange={this.controlValue}
-          value={this.state.value}
+          value={this.state.password}
         />
         <input
           type="checkbox"
@@ -66,6 +73,7 @@ export class Login extends React.Component {
         >
           Submit
         </button>
+        <button onClick={this.resetStatus}>reset</button>
       </div>
     );
   }
