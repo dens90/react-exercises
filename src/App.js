@@ -6,6 +6,7 @@ import { CounterDisplay } from "./CounterDisplay"
 import { Hello } from "./Hello"
 import { InteractiveWelcome } from "./InteractiveWelcome"
 import { Login } from "./Login"
+import { Uncontrolled, UncontrolledLogin } from "./UncontrolledLogin"
 import { Welcome } from "./Welcome"
 
 
@@ -21,7 +22,7 @@ export class App extends React.Component{
                 <ClickTracker />
                 <InteractiveWelcome />
                 <Login />
-
+                <UncontrolledLogin />
             </div>
         )
     }
