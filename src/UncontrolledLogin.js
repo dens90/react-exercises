@@ -25,7 +25,9 @@ export class UncontrolledLogin extends React.Component {
       remember,
     });
   };
-
+  componentDidMount() {
+    this._formRef.current.elements.username.focus();
+  }
   render() {
     return (
       <div>
