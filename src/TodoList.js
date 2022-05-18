@@ -17,6 +17,11 @@ export class TodoList extends React.Component {
       };
     });
   };
+  handleReset = e => {
+    this.setState({
+        items: []
+    })
+  }
   render() {
     return (
       <div>
@@ -24,6 +29,7 @@ export class TodoList extends React.Component {
           <input name="input" type="text" />
           <button type="submit">add</button>
         </form>
+        <button name="reset" onClick={this.handleReset}>reset</button>
         <ul>
           {this.state.items.map((item, index) => (
             <li key={index}>{item}</li>
