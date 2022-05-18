@@ -15,7 +15,7 @@ export class App extends React.Component {
   render() {
     return (
       <div>
-        <Container>
+        <Container title={<h1>Il mio contenitore</h1>}>
           <Hello name={<strong>React</strong>} />
           <Welcome name="john" age={16} />
           <Counter />
