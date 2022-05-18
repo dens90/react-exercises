@@ -8,7 +8,9 @@ export class TodoList extends React.Component {
 
   addPersons = (e) => {
     e.preventDefault();
+    const inputTodo = e.target.elements.input;
     const todo = e.target.elements.input.value;
+    inputTodo.value = "";
     this.setState((state) => {
       return {
         items: [...state.items, todo],
