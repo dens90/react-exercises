@@ -10,11 +10,27 @@ import { Login } from "./Login";
 import { TodoList } from "./TodoList";
 import { Uncontrolled, UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
+import { DisplayLanguage } from "./DisplayLanguage";
+import { LanguageContext } from "./LanguageContext";
 
 export class App extends React.Component {
+  state = {
+    language: "en",
+  };
+
+  changeLang = (e) => {
+    this.setState({
+      language: e.target.value,
+    });
+  };
   render() {
     return (
       <div>
+        <select value={this.state.language} onChange={this.changeLang}>
+          <option value="en">English</option>
+          <option value="it">Italiano</option>
+        </select>
+
         <Container title={<h1>Il mio contenitore</h1>}>
           <Hello name={<strong>React</strong>} />
           <Welcome name="john" age={16} />
@@ -49,6 +65,10 @@ export class App extends React.Component {
               );
             }}
           ></TodoList>
+
+          <LanguageContext.Provider value={this.state.language}>
+            <DisplayLanguage />
+          </LanguageContext.Provider>
         </Container>
       </div>
     );
