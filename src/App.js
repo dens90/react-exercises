@@ -1,17 +1,16 @@
 import React from "react";
 import Sum from "./Sum";
-
-import Welcome from './Welcome'
-
+import Counter from "./Counter";
+import Welcome from "./Welcome";
 
 const App = () => {
-  return(
+  return (
     <div>
-    <Welcome name={'dennis'}/>
-    <Sum />
-  </div>
-  )
-  
-}
+      <Welcome name={"dennis"} />
+      <Sum />
+      <Counter />
+    </div>
+  );
+};
 
-export default App
+export default App;
