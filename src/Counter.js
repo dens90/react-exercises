@@ -8,12 +8,12 @@ const Counter = ({ initialValue = 0, onCounterChange }) => {
   }, [count, onCounterChange]);
 
   useEffect(() => {
-    const Myinterval = setInterval(() => {
-      setCount(count + 1);
+    const myInterval = setInterval(() => {
+      setCount((count) => count + 1);
     }, 1000);
-    return () => {
-      return Myinterval ? clearInterval(Myinterval) : "not work";
-    };
+    return () => 
+       myInterval ? clearInterval(myInterval) : null
+    ;
   }, []);
 
   const handleCounterIncrement = () => {
