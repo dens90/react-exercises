@@ -4,13 +4,15 @@ import Counter from "./Counter";
 import Welcome from "./Welcome";
 import Form from "./Form";
 
-
 const App = () => {
+  const onCounterChange = (count) => {
+    return count;
+  };
   return (
     <div>
       <Welcome name={"dennis"} />
       <Sum />
-      <Counter />
+      <Counter onCounterChange={onCounterChange} />
       <Form />
     </div>
   );
