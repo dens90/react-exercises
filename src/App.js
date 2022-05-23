@@ -12,7 +12,7 @@ const App = () => {
     <div>
       <Welcome name={"dennis"} />
       <Sum />
-      <Counter onCounterChange={onCounterChange} />
+      <Counter onCounterChange={onCounterChange}  />
       <Form />
     </div>
   );
