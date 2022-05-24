@@ -12,12 +12,12 @@ const App = () => {
   };
   return (
     <div>
-      {/* <Welcome name={"dennis"} />
+      <Welcome name={"dennis"} />
       <Sum />
-      <Counter onCounterChange={onCounterChange}  /> */}
+      <Counter />
       {/* <Form /> */}
       {/* <GithubUser  username='dens90'/> */}
-      <GithubUserList name/>
+      <GithubUserList name />
     </div>
   );
 };
