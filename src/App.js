@@ -5,6 +5,7 @@ import Welcome from "./Welcome";
 import Form from "./Form";
 import GithubUser from "./GithubUser";
 import GithubUserList from "./GithubUserList";
+import FilteredList from "./FilteredList";
 
 const App = () => {
   const onCounterChange = (count) => {
@@ -14,10 +15,11 @@ const App = () => {
     <div>
       
       {/* <Sum /> */}
-      {/* <Counter /> */}
+      <Counter />
       {/* <Form /> */}
-      <GithubUser  username='dens90'/>
+      {/* <GithubUser  username='dens90'/> */}
       {/* <GithubUserList name /> */}
+      <FilteredList />
     </div>
   );
 };
