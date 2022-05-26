@@ -14,9 +14,9 @@ const App = () => {
     <div>
       
       {/* <Sum /> */}
-      {/* <Counter /> */}
+      <Counter />
       {/* <Form /> */}
-      <GithubUser  username='dens90'/>
+      {/* <GithubUser  username='dens90'/> */}
       {/* <GithubUserList name /> */}
     </div>
   );
