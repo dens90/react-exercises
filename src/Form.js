@@ -1,45 +1,18 @@
-import { useState } from "react";
+import useForm from "./useForm";
 
-const Form = () => {
-  const [data, setData] = useState({
-    username: "",
-    surname: "",
-    remember: false,
-  });
+const Form = ({users}) => {
+  const {username, password, inputUser} = useForm(users)
 
-  const changeValuesForm = (e) => {
-    const { name, type, value, checked } = e.target;
-    console.log(name);
-    setData((data) => {
-      return {
-        ...data,
-        [name]: type === "checkbox" ? checked : value,
-      };
-    });
-  };
-  console.log(data);
-  return (
-    <form>
-      <input
-        onChange={changeValuesForm}
-        type="text"
-        value={data.username}
-        name="username"
-      />
-      <input
-        onChange={changeValuesForm}
-        type="text"
-        value={data.surname}
-        name="surname"
-      />
-      <input
-        type="checkbox"
-        onChange={changeValuesForm}
-        checked={data.remember}
-        name="remember"
-      />
-    </form>
-  );
-};
+  return(
+    <div>
+      <form onSubmit={inputUser}>
+        <input type='text' name="username" />
+        <input type="password" name="password" />
+      <button type="submit">add</button>
+      </form>
+       <h1>{username} { password}</h1>
+    </div>
+  )
+}
 
-export default Form;
+export default Form
