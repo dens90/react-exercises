@@ -6,6 +6,7 @@ import Form from "./Form";
 import GithubUser from "./GithubUser";
 import GithubUserList from "./GithubUserList";
 import FilteredList from "./FilteredList";
+import CarDetails from "./CarDetails";
 
 const App = () => {
   const onCounterChange = (count) => {
@@ -13,13 +14,13 @@ const App = () => {
   };
   return (
     <div>
-      
+      <CarDetails initialData={{model:'', year:'', color:''}}/>
       {/* <Sum /> */}
-      <Counter />
+      {/* <Counter /> */}
       {/* <Form /> */}
       {/* <GithubUser  username='dens90'/> */}
       {/* <GithubUserList name /> */}
-      <FilteredList />
+      {/* <FilteredList /> */}
     </div>
   );
 };
