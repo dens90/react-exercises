@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Root from "./Root";
 import Sum from "./Sum";
 import Counter from "./Counter";
 import Welcome from "./Welcome";
@@ -9,7 +10,7 @@ import FilteredList from "./FilteredList";
 import CarDetails from "./CarDetails";
 import { LanguageContext } from "./LanguageContext";
 import DisplayLanguage from "./DIsplayLanguage";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 const App = () => {
   const [language, setLanguage] = useState("en");
 
@@ -18,14 +19,11 @@ const App = () => {
   };
   return (
     <div>
-      <LanguageContext.Provider value={language}>
-        <select value={language} onChange={handleChangeLanguage}>
-          <option value="en">English</option>
-          <option value="it">Italiano</option>
-        </select>
-
-        <DisplayLanguage />
-      </LanguageContext.Provider>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Welcome name="Welcome" />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
