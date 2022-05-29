@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+
+import ShowGithubUsers from "./ShowGithubUser";
 import useGithubUsers from "./useGithubUser";
 
 const GithubUser = ({ username }) => {
@@ -12,6 +13,7 @@ const GithubUser = ({ username }) => {
     <div>
       <button onClick={getFetch}>Load user data</button>
       {data && <h1>Name: {data.name}</h1>}
+      {<ShowGithubUsers username />}
     </div>
   );
 };

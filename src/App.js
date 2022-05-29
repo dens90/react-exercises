@@ -11,18 +11,16 @@ import CarDetails from "./CarDetails";
 import { LanguageContext } from "./LanguageContext";
 import DisplayLanguage from "./DIsplayLanguage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ShowGithubUsers from "./ShowGithubUser";
 const App = () => {
-  const [language, setLanguage] = useState("en");
-
-  const handleChangeLanguage = (e) => {
-    setLanguage(e.target.value);
-  };
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Welcome name="Welcome" />}></Route>
-          <Route path="/counter" element={<Counter />}></Route>
+            <Route path="users" element={<GithubUser />} >
+            <Route path=":username" element={ <ShowGithubUsers username/>} />
+            </Route>
         </Routes>
       </BrowserRouter>
     </div>
