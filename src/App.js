@@ -22,6 +22,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Welcome name="Welcome" />}></Route>
+          <Route path="/counter" element={<Counter />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
