@@ -16,17 +16,12 @@ import ShowGithubUsers from "./ShowGithubUser";
 const App = () => {
   return (
     <div>
-      <ul>
-        <Link to={"/page1"}>
-          <li>Pagina 1</li>
-        </Link>
-        <Link to={"/page2"}>
-          <li>Pagina 2</li>
-        </Link>
-        <Link to={"/page3"}>
-          <li>Pagina 3</li>
-        </Link>
-      </ul>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Welcome />} />
+          <Route path="*" element={<div>Not Found</div>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
