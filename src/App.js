@@ -16,14 +16,13 @@ import ShowGithubUsers from "./ShowGithubUser";
 const App = () => {
   return (
     <div>
-      <BrowserRouter>
+      <GithubUser />
+      {/* <BrowserRouter>
         <Routes>
-          <Route path="/users" element={<GithubUserList />}>
-          <Route index element={<p>Add a user and select it</p>} />
-            <Route path=":username" element={<ShowGithubUsers />} />
-          </Route>
+         <Route path="/" element={<GithubUser username/>} />
+          
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 };

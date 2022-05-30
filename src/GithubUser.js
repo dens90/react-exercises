@@ -1,15 +1,21 @@
-import { useEffect } from "react";
-import ShowGithubUsers from "./ShowGithubUser";
 import useGithubUsers from "./useGithubUser";
 
-const GithubUser = ({ username }) => {
-  const [data, loading, error, getDataFetch] = useGithubUsers(username);
+const GithubUser = () => {
+  const { users, isloading, error } = useGithubUsers();
 
-  useEffect(() => {
-    getDataFetch(username);
-  }, [data]);
-
-  return <div>{data && <h1>Name: {data.name}</h1>}</div>;
+  return (
+    <div>
+      {!isloading && <h3>Loading...</h3>}
+      {error && <h3>An error has occured</h3>}
+      {users && !error && (
+        <ul>
+          {users.map((user) => {
+            return <li key={user.login}>{user.login}</li>;
+          })}
+        </ul>
+      )}
+    </div>
+  );
 };
 
 export default GithubUser;
