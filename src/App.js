@@ -18,8 +18,9 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Welcome />} />
-          <Route path="*" element={<div>Not Found</div>} />
+          <Route path="/users" element={<GithubUserList />}>
+            <Route path=":username" element={<ShowGithubUsers />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>

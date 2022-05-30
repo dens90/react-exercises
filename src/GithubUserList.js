@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Link, Outlet, Route } from "react-router-dom";
 import GithubUser from "./GithubUser";
+import ShowGithubUsers from "./ShowGithubUser";
 
 const GithubUserList = () => {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState(["dens90"]);
 
   const findUsers = (e) => {
     e.preventDefault();
@@ -19,11 +21,12 @@ const GithubUserList = () => {
         {users.map((user) => {
           return (
             <li>
-              <GithubUser username={user} />
+              <Link to={`/users/${user}`}>{user}</Link>
             </li>
           );
         })}
       </ul>
+      <Outlet />
     </div>
   );
 };
