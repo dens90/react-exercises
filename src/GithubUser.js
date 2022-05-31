@@ -1,10 +1,12 @@
 import useGithubUsers from "./useGithubUser";
 
 const GithubUser = () => {
-  const { users, isloading, error } = useGithubUsers('dens90');
+  const { users, isloading, error, handleRefreshUsers } =
+    useGithubUsers("dens90");
   console.log(users);
   return (
     <div>
+      <button onClick={handleRefreshUsers}> Refresh</button>
       {!isloading && <h3>Loading...</h3>}
       {error && <h3>An error has occured</h3>}
       {users && !error && (
@@ -18,11 +20,4 @@ const GithubUser = () => {
 
 export default GithubUser;
 
-// // on git
-// <button onClick={onRefresh}> Refresh</button>
-//       {!isloading && <h3>Loading...</h3>}
-
-// // onusegit
-//       const handleRefreshUsers = () => {
-//         mutate()
-//       }
+// on git
