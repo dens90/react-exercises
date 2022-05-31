@@ -7,7 +7,7 @@ const GithubUser = () => {
   return (
     <div>
       <button onClick={handleRefreshUsers}> Refresh</button>
-      {!isloading && <h3>Loading...</h3>}
+      {isloading && <h3>Loading...</h3>}
       {error && <h3>An error has occured</h3>}
       {users && !error && (
         <ul>
