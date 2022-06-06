@@ -3,8 +3,6 @@ import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import App from "./App";
 import "./index.css";
-import { counterState } from "./reducers/counterReducer";
-import TodosReducer from "./reducers/TodosReducer";
 import { store } from "./store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
