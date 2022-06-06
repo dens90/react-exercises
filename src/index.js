@@ -1,20 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
 import App from "./App";
-import { incrementCounter } from "./CounterReducer";
 import "./index.css";
-import { store } from "./Store";
+import { counterState } from "./reducers/counterReducer";
+import TodosReducer from "./reducers/TodosReducer";
+import { store } from "./store";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(
 
-//     <React.StrictMode>
-//             <App />
-//     </React.StrictMode>
-// )
-
-store.subscribe(() => {
-  console.log(store.getState());
-});
-
-store.dispatch(incrementCounter(2));
-store.dispatch(incrementCounter(3));
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>
+);
