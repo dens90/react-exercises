@@ -12,7 +12,6 @@ export class App extends React.Component{
                 <Hello name={<strong>React</strong>} />
                 <Welcome name='john' age={16}/>
                 <Counter />
-                <CounterDisplay  />
             </div>
         )
     }
